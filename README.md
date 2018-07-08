@@ -24,6 +24,11 @@ Dashboard index
 ```
 git clone https://github.com/MadalinTomescu/laravel-blog.git
 ```
+Or use Composer
+```
+composer create-project madalintomescu/laravel-blog
+```
+
 
 2. Install the project dependencies with Composer
 ```
