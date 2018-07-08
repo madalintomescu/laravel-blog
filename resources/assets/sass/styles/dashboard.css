@@ -1,0 +1,84 @@
+.sidebar .nav-link {
+  transition: .2s background-color;
+}
+
+.callout-blue {
+  border-left-color: #03A9F4;
+}
+
+.callout-red {
+  border-left-color: #F44336;
+}
+
+.callout-purple {
+  border-left-color: #9C27B0;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  border-bottom: 0;
+  border-radius: 0;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+
+.breadcrumb-item {
+  font-size: .875rem;
+}
+
+.app-footer {
+  background-color: #fff;
+}
+
+.main {
+  background-color: #f5f5f5;
+}
+
+.sidebar-show.custom-navbar-brand {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .brand-minimized .app-header .navbar-brand {
+    width: auto !important;
+  }
+}
+
+.thead-row th {
+  color: #444;
+  font-weight: 600;
+}
+
+.page-heading {
+  font-size: 24px;
+  color: #5f5f5f;
+  font-weight: 400;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
+#image_preview {
+  max-width: 150px;
+}
+
+/* Select2 */
+.select2, .select2-results {
+  font-size: 14px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: #ccc;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: #eaeaea;
+  border: 0;
+}
+
+.select2-selection {
+  border-color: #ced4da !important;
+  border-radius: 2px !important;
+  padding: 3px;
+  border-color: #ced4da;
+}

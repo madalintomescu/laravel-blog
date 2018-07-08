@@ -1,0 +1,9 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Styles
+@import './styles/app';
+
+// Alertify notifications
+@import '~alertifyjs/build/css/alertify';
+@import '~alertifyjs/build/css/themes/bootstrap';
