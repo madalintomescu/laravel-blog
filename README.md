@@ -24,7 +24,7 @@ Dashboard index
 ```
 git clone https://github.com/MadalinTomescu/laravel-blog.git
 ```
-Or use Composer
+Or use Composer (and skip step 2)
 ```
 composer create-project madalintomescu/laravel-blog
 ```
