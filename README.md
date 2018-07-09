@@ -22,7 +22,7 @@ Dashboard index
 
 1. Clone the repository
 ```
-git clone https://github.com/MadalinTomescu/laravel-blog.git
+git clone https://github.com/madalintomescu/laravel-blog.git
 ```
 Or use Composer (and skip step 2)
 ```
