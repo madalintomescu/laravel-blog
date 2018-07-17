@@ -47,6 +47,8 @@
                 <div class="form-group">
                     <textarea name="body" id="post-body" placeholder="Post content...">{!! old('body') ?? $post->body !!}</textarea>
 
+                    <div id="count" class="fs-14">0 words, 0 characters</div>
+
                     @if ($errors->has('body'))
                     <span class="invalid-message">
                         <strong>{{ $errors->first('body') }}</strong>
@@ -209,10 +211,30 @@
 <script src="{{ asset('js/plugins/summernote/summernote-bs4.js') }}"></script>
 
 <script>
-  $(document).ready(function() {
-    $('#post-body').summernote({
-      placeholder: 'Post content...',
-      height: 400
+$(document).ready(function() {
+
+  function countCharacters() {
+    var words = $('.note-editable').text().replace(/\s+/g, ' ').trim().split(' ');
+    var wordsCount = words.filter(entry => entry.trim() != '').length;
+    var characters = $('.note-editable').text().length;
+    var count = `${wordsCount} ${wordsCount === 1 ? 'word' : 'words'}, 
+    ${characters} ${characters === 1 ? 'character' : 'characters'}`;
+    $('#count').text(count);
+  }
+
+  $('#post-body').summernote({
+    placeholder: 'Post content...',
+    height: 350,
+    callbacks: {
+      onInit: function() {
+        if ($('.note-editable').text().length) {
+          countCharacters();
+        }
+      },
+      onChange: function() {
+        countCharacters();
+      }
+    }
   });
 });
 </script>
