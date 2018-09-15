@@ -11,12 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .js('resources/assets/js/dashboard.js', 'public/js')
-    .sass('resources/assets/sass/dashboard.scss', 'public/css')
-    .js('resources/assets/js/image_preview.js', 'public/js')
-    .js('resources/assets/js/select2.js', 'public/js')
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .js('resources/js/dashboard.js', 'public/js')
+    .sass('resources/sass/dashboard.scss', 'public/css')
+    .js('resources/js/image_preview.js', 'public/js')
+    .js('resources/js/select2.js', 'public/js')
 
-mix.copyDirectory('resources/assets/js/plugins/summernote', 'public/js/plugins/summernote');
-mix.copy('resources/assets/img/no-image.png', 'storage/app/public/avatars/no-image.png');
+mix.copyDirectory('resources/js/plugins/summernote', 'public/js/plugins/summernote');
+mix.copy('resources/img/no-image.png', 'storage/app/public/avatars/no-image.png');
