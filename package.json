@@ -16,7 +16,8 @@
         "jquery": "^3.2",
         "laravel-mix": "^2.1.14",
         "lodash": "^4.17.11",
-        "popper.js": "^1.14.4"
+        "popper.js": "^1.14.4",
+        "vue": "^2.5.7"
     },
     "dependencies": {
         "@coreui/coreui": "^2.0.6",
