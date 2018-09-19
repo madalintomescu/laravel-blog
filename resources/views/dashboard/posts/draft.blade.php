@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <a href="{{ route('dashboard.posts') }}" class="fs-14">
+    <a href="{{ route('dashboard.posts.index') }}" class="fs-14">
         Published ({{{ $publishedCount }}})
     </a>
     <a href="{{ route('dashboard.posts.draft') }}" class="fs-14 text-muted">
