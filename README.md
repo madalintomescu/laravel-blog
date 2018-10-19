@@ -89,7 +89,7 @@ Front-end
 * [select2](https://github.com/select2/select2)
 
 ## Changelog
-[0.2.0](https://github.com/madalintomescu/laravel-blog/compare/v0.1.0...v0.2.0) - 2018-10-19
+[0.2.0](https://github.com/madalintomescu/laravel-blog/compare/v0.1...v0.2.0) - 2018-10-19
 * Add API Controllers and Resources
 * Add Vue.js components
 * Add post characters count
