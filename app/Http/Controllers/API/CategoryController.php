@@ -28,9 +28,9 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-          'name' => 'required|string|unique:categories|max:200',
-          'description' => 'nullable|string'
-      ]);
+            'name' => 'required|string|max:200|unique:categories',
+            'description' => 'nullable|string'
+        ]);
 
         $category = Category::create($request->all());
 

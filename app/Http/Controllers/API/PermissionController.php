@@ -28,7 +28,7 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string|max:200'
+            'name' => 'required|string|max:200|unique:permissions'
         ]);
 
         $permission = Permission::create($request->all());
@@ -51,7 +51,7 @@ class PermissionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Spatie\Permission\Models\Permission  $permission
+     * @param  \Spatie\Permission\Models\Permission $permission
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Permission $permission)
@@ -68,7 +68,7 @@ class PermissionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \Spatie\Permission\Models\Permission  $permission
+     * @param \Spatie\Permission\Models\Permission $permission
      * @return \Illuminate\Http\Response
      */
     public function destroy(Permission $permission)

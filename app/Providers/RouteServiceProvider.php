@@ -23,24 +23,32 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::bind('post', function ($value) {
+        Route::bind('post', function($value) {
             return \App\Post::where('id', $value)->orWhere('slug', $value)->first() ?? abort(404, 'Post doesn\'t exists!');
         });
 
-        Route::bind('drafted_post', function ($id) {
+        Route::bind('drafted_post', function($id) {
             return \App\Post::onlyDrafted()->findOrFail($id);
         });
 
-        Route::bind('trashed_post', function ($id) {
+        Route::bind('trashed_post', function($id) {
             return \App\Post::onlyTrashed()->findOrFail($id);
         });
 
-        Route::bind('category', function ($value) {
+        Route::bind('category', function($value) {
             return \App\Category::where('id', $value)->orWhere('slug', $value)->first() ?? abort(404, 'Category doesn\'t exists!');
         });
 
-        Route::bind('tag', function ($value) {
+        Route::bind('tag', function($value) {
             return \App\Tag::where('id', $value)->orWhere('slug', $value)->first() ?? abort(404, 'Tag doesn\'t exists!');
+        });
+
+        Route::bind('role', function($value) {
+            return \Spatie\Permission\Models\Role::where('id', $value)->orWhere('name', $value)->first() ?? abort(404, 'Role doesn\'t exists!');
+        });
+
+        Route::bind('permission', function($value) {
+            return \Spatie\Permission\Models\Permission::where('id', $value)->orWhere('name', $value)->first() ?? abort(404, 'Permission doesn\'t exists!');
         });
 
         parent::boot();
