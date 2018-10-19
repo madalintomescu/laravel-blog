@@ -64,9 +64,6 @@
             <li class="nav-item">
               <a href="{{ route('dashboard.users.index') }}" class="nav-link">All users</a>
             </li>
-            <li class="nav-item">
-              <a href="{{ route('dashboard.users.create') }}" class="nav-link">Add user</a>
-            </li>
 
             <li class="nav-item">
               <a href="{{ route('dashboard.users.edit', auth()->user()->id) }}" class="nav-link">Edit profile</a>
@@ -74,32 +71,16 @@
           </ul>
         </li>
 
-        <li class="nav-item nav-dropdown">
-          <a href="#" class="nav-link nav-dropdown-toggle">
+        <li class="nav-item">
+          <a href="{{ route('dashboard.roles.index') }}" class="nav-link">
             <span class="nav-icon oi oi-people"></span> Roles
           </a>
-          <ul class="nav-dropdown-items">
-            <li class="nav-item">
-              <a href="{{ route('dashboard.roles.index') }}" class="nav-link">All roles</a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('dashboard.roles.create') }}" class="nav-link">Add role</a>
-            </li>
-          </ul>
         </li>
 
-        <li class="nav-item nav-dropdown">
-          <a href="#" class="nav-link nav-dropdown-toggle">
+        <li class="nav-item">
+          <a href="{{ route('dashboard.permissions.index') }}" class="nav-link">
             <span class="nav-icon oi oi-key"></span>Permissions
           </a>
-          <ul class="nav-dropdown-items">
-            <li class="nav-item">
-              <a href="{{ route('dashboard.permissions.index') }}" class="nav-link">All permissions</a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('dashboard.permissions.create') }}" class="nav-link">Add permission</a>
-            </li>
-          </ul>
         </li>
 
       </ul>

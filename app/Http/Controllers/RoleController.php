@@ -17,18 +17,7 @@ class RoleController extends Controller
     {
         return view('dashboard.roles.index', [
             'roles' => Role::with('permissions')->orderBy('id', 'desc')->paginate(10),
-            'rolesCount' => Role::count()
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('dashboard.roles.create', [
+            'rolesCount' => Role::count(),
             'permissions' => Permission::all()
         ]);
     }

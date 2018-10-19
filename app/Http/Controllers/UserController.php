@@ -21,6 +21,7 @@ class UserController extends Controller
     {
         return view('dashboard.users.index', [
             'users' => User::with(['posts', 'roles'])->withCount('posts')->latest()->paginate(10),
+            'roles' => Role::get()
         ]);
     }
 
