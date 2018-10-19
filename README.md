@@ -9,6 +9,7 @@ A basic blog system based on Laravel 5.
 * [SummerNote](https://summernote.org/) WYSIWYG Editor
 * Admin dashboard
 * Manage users, roles and permissions
+* Vue.js components
 
 ## Screenshots
 
@@ -88,7 +89,13 @@ Front-end
 * [select2](https://github.com/select2/select2)
 
 ## Changelog
-0.1.0 - 2018-07-08
+[0.2.0](https://github.com/madalintomescu/laravel-blog/compare/v0.1.0...v0.2.0) - 2018-10-19
+* Add API Controllers and Resources
+* Add Vue.js components
+* Add post characters count
+* Small changes
+
+[0.1.0](https://github.com/madalintomescu/laravel-blog/tree/v0.1) - 2018-07-08
 * Initial release
 
 ## License
