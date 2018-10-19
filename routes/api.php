@@ -14,13 +14,19 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-	return $request->user();
+    return $request->user();
 });
 
 Route::namespace('API')->group(function() {
-	Route::apiResources([
-		'categories' => 'CategoryController',
-		'tags' => 'TagController',
-		'permissions' => 'PermissionController'
-	]);
+    Route::apiResources([
+        'categories' => 'CategoryController',
+        'permissions' => 'PermissionController',
+        'roles' => 'RoleController',
+        'tags' => 'TagController',
+        'users' => 'UserController'
+    ]);
+
+    Route::get('email/{email}', function($email) {
+        return App\User::where('email', $email)->first() ?? abort(404);
+    });
 });

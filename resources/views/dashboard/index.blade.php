@@ -8,27 +8,11 @@
 <div class="container-fluid">
 
     @if (!auth()->user()->hasRole('user'))
-    <div class="row">
-
-        <div class="col">
-            <div class="callout callout-blue my-3 p-3 bg-white rounded box-shadow">
-                <small class="text-muted">Users</small><br>
-                <strong class="h4">{{ $users_count }}</strong>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="callout callout-red my-3 p-3 bg-white rounded box-shadow">
-                <small class="text-muted">Posts</small><br>
-                <strong class="h4">{{ $posts_count }}</strong>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="callout callout-purple my-3 p-3 bg-white rounded box-shadow">
-                <small class="text-muted">Comments</small><br>
-                <strong class="h4">{{ $comments_count }}</strong>
-            </div>
+    <div id="app">
+        <div class="row">
+            <callout title="Users" value="{{ $users_count }}" color="blue"></callout>
+            <callout title="Posts" value="{{ $posts_count }}" color="yellow"></callout>
+            <callout title="Comments" value="{{ $comments_count }}" color="red"></callout>
         </div>
     </div>
     @endif
