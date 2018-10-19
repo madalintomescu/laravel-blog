@@ -19,7 +19,23 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
- 
+
+// Import VeeValidate for form field validation
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
+
+// Import FontAwesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+library.add(faSpinner);
+
+Vue.component('callout', require('./components/Callout.vue'));
+Vue.component('modal', require('./components/Modal.vue'));
+Vue.component('v-form', require('./components/VForm.vue'));
+Vue.component('fa-icon', FontAwesomeIcon);
+Vue.component('select2', require('./components/Select2.vue'));
+
 const app = new Vue({
-	el: '#app'
+  el: '#app'
 });
