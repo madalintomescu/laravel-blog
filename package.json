@@ -20,10 +20,15 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "@coreui/coreui": "^2.0.6",
+        "@coreui/coreui": "^2.0.20",
+        "@fortawesome/fontawesome-svg-core": "^1.2.6",
+        "@fortawesome/free-solid-svg-icons": "^5.4.1",
+        "@fortawesome/vue-fontawesome": "^0.1.1",
         "alertifyjs": "^1.11.1",
         "npm": "^6.4.1",
         "perfect-scrollbar": "^1.4.0",
-        "select2": "^4.0.6-rc.1"
+        "select2": "^4.0.6-rc.1",
+        "vee-validate": "^2.1.0-beta.11",
+        "vue-select": "^2.5.1"
     }
 }
